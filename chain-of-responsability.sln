@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chain-of-responsability", "chain-of-responsability\chain-of-responsability.csproj", "{465E4EC9-99EF-4C32-8183-239C44C46545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chain-of-responsability-tests", "chain-of-responsability-tests\chain-of-responsability-tests.csproj", "{9EF2B38D-94FB-43F5-94FB-00F901CB3458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{465E4EC9-99EF-4C32-8183-239C44C46545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465E4EC9-99EF-4C32-8183-239C44C46545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465E4EC9-99EF-4C32-8183-239C44C46545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465E4EC9-99EF-4C32-8183-239C44C46545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF2B38D-94FB-43F5-94FB-00F901CB3458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF2B38D-94FB-43F5-94FB-00F901CB3458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF2B38D-94FB-43F5-94FB-00F901CB3458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF2B38D-94FB-43F5-94FB-00F901CB3458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CE8FCBD-9397-44CB-8647-F70C23F7A5BD}
+	EndGlobalSection
+EndGlobal
