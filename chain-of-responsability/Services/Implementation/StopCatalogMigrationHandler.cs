@@ -9,9 +9,15 @@ namespace chain_of_responsability.Services.Implementation
 {
     public class StopCatalogMigrationHandler : MigrationAbstractHandler
     {
+        private readonly LoggerService _loggerService;
+        public StopCatalogMigrationHandler(LoggerService loggerService)
+        {
+            _loggerService = loggerService;
+        }
+
         public override void Migrate()
         {
-            Console.WriteLine("StopCatalog migrating...");
+            _loggerService.LogInfo("StopCatalog migrating...");
 
             var dataService = DataService.GetInstance();
             dataService.Add("stop-catalog-1", "stop-catalog-value-1");

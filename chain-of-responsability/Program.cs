@@ -13,19 +13,8 @@ namespace chain_of_responsability
 
             using IHost host = CreateHostBuilder(args).Build();
             Console.WriteLine("Chain of responsability pattern used for migrating data as a flow");
-            var stopCatalog = new StopCatalogMigrationHandler();
-            var stopMigration = new StopMigrationHandler();
-            var stopRegisterMigration = new StopRegisterMigrationHandler();
-            stopMigration
-                .SetHandler(stopCatalog)
-                .SetHandler(stopRegisterMigration);
-            stopMigration.Migrate();
-
-            Console.WriteLine("After make migrations");
-            foreach (var item in DataService.GetInstance().Map)
-            {
-                Console.WriteLine(item);
-            }            
+            MigrationProcessService migrationProcessService = host.Services.GetService<MigrationProcessService>();
+            migrationProcessService.StartMigration();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args)
@@ -33,7 +22,9 @@ namespace chain_of_responsability
             return Host.CreateDefaultBuilder(args)
                 .ConfigureServices((_, services) =>
                 {
-                    services.AddTransient<IMigrateHandler, StopCatalogMigrationHandler>();
+                    //services.AddTransient<IMigrateHandler, StopCatalogMigrationHandler>();
+                    services.AddTransient<MigrationProcessService>();
+                    services.AddSingleton<LoggerService>();
                 });
         }
     }

@@ -5,9 +5,15 @@ namespace chain_of_responsability.Services.Implementation
 {
     public class StopRegisterMigrationHandler : MigrationAbstractHandler
     {
+        private readonly LoggerService _loggerService;
+        public StopRegisterMigrationHandler(LoggerService loggerService)
+        {
+            _loggerService = loggerService;
+        }
+
         public override void Migrate()
         {
-            Console.WriteLine("StopRegister migrating...");
+            _loggerService.LogInfo("StopRegister migrating...");
 
             var dataService = DataService.GetInstance();
 
